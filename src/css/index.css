@@ -9,3 +9,13 @@ html, body, .con {
 #wei {
   width: 100%;
   height: 100%; }
+  #wei .page1 {
+    background: #F37289; }
+  #wei .page2 {
+    background: #D160FC; }
+  #wei .page3 {
+    background: #6994F8; }
+  #wei .page4 {
+    background: #8BEEB3; }
+  #wei .page5 {
+    background: #EFE48D; }
