@@ -19,7 +19,7 @@ gulp.task('sass', function(){
         })
         .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.reload({stream: true}));
-})
+});
 
 // 浏览器刷新任务
 gulp.task('browserSync', function(){
@@ -37,5 +37,5 @@ gulp.task('browserSync', function(){
 			'./src/js/**/*.js',
 			'./index.html'
 		],
-	})
-})
+	});
+});
