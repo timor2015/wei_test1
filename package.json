@@ -1,0 +1,25 @@
+{
+  "name": "wei_test1",
+  "version": "1.0.0",
+  "description": "微信场景测试",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timor2015/wei_test1.git"
+  },
+  "author": "timor2015",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timor2015/wei_test1/issues"
+  },
+  "homepage": "https://github.com/timor2015/wei_test1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.0.6"
+  }
+
+}
