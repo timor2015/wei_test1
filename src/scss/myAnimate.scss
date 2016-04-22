@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+
+// 伪类添加背景图
+@mixin bgCome( $url : '#000' ){
+	position: relative;
+	z-index:1;
+	.bg{
+		width : 100%; 
+		height : 100%;
+		animation : scaleDown 5s ease 1s both;
+		background-image: url($url);
+		background-size:cover;
+		background-position : 50% 50%;
+		transform-origin: center center;
+	}
+}
+
+// 伪类背景图放大
+@mixin scaleBgCome($x : 1.1, $y : 1.1){
+	&::before{
+		width : $x * 100%;
+		height : $y * 100%;
+	}
+}
+
+.scaleBgCome{
+	@include scaleBgCome(1.2, 1.2);
+}
+
+
+@keyframes scaleDown{
+	0% {
+		transform:scale(1.5)
+	}
+	100%{
+		transform:scale(1)
+	}
+}
