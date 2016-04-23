@@ -5,13 +5,24 @@ setTimeout(function(){
 
 	    direction: 'vertical',
 		mousewheelControl: true,
-		watchSlidesProgress: true,
+		watchSlidesProgress: true,	
+
+		// 如果需要分页器
+    	pagination: '.swiper-pagination',
+    	
 		onInit: function(swiper) {
 			swiper.myactive = 0;
 			// 视图切换时缩放的大小
 			swiper.scaleNum = 0.2;
-			
+
+			swiperAnimateCache(swiper);
+	    	swiperAnimate(swiper);			
 		},
+
+		onSlideChangeEnd: function(swiper){
+			swiperAnimate(swiper);
+	    },
+
 		onProgress: function(swiper) {
 			for (var i = 0; i < swiper.slides.length; i++) {
 				var slide = swiper.slides[i];
@@ -47,6 +58,7 @@ setTimeout(function(){
 			}
 
 			swiper.myactive = swiper.activeIndex;
+			swiperAnimate(swiper);
 
 		},
 		onSetTransition: function(swiper, speed) {
@@ -56,8 +68,8 @@ setTimeout(function(){
 					es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
 				}
 			}
-		}
+		},
+
 	});
 }, 50);
-
 
